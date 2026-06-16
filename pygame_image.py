@@ -23,20 +23,15 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT: return
 
-        screen.blit(bg_img,[0,0])
+        x = tmr % 1600
+        screen.blit(bg_img,[-x,0])
+
         screen.blit(kk_img,[300,200])
 
         pg.display.update()
         tmr += 1
-        clock.tick(50)
+        clock.tick(200)
 
-        txt = font.render(str(tmr), True, (255, 255, 255))
-        screen.fill((50, 50, 50))
-        screen.blit(txt, [300, 200])
-        screen.blit(enn, [100, 400])
-        pg.display.update()
-        tmr += 1        
-        clock.tick(1)
 
 
 if __name__ == "__main__":
