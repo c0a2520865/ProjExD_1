@@ -25,7 +25,7 @@ def main():
 
         x = tmr % 1600
         screen.blit(bg_img,[-x,0])
-
+        screen.blit(bg_img_flip, [1600 - x, 0])
         screen.blit(kk_img,[300,200])
 
         pg.display.update()
